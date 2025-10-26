@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^prajapatrealty\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.prajapatrealty\.com$
+RewriteRule ^prajapatrealty\.com\/?(.*)$ "https\:\/\/prajapatrealty\.com\/$1" [R=301,L]
+
